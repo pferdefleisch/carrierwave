@@ -248,11 +248,11 @@ module CarrierWave
       image = ::Magick::Image.read(current_path)
 
       frames = if image.size > 1
-      frames = if image.size > 1¬
-        list = ::Magick::ImageList.new¬
-        frame = image.first¬
-        list << (block_given? ? yield( frame ) : frame)¬
-        block_given? ? list : list.append(true)¬
+      frames = if image.size > 1
+        list = ::Magick::ImageList.new
+        frame = image.first
+        list << (block_given? ? yield( frame ) : frame)
+        block_given? ? list : list.append(true)
       else
         frame = image.first
         frame = yield( frame ) if block_given?
